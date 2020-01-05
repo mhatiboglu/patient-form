@@ -4,3 +4,7 @@
   box-sizing: border-box;
 }
 
+header h1 {
+  color: blue;
+  text-align: center;
+}
