@@ -3,8 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-header h1 {
-  color: blue;
+body {
+  background-color: rgba(0, 0, 0, 0.062);
+}
+header h1,
+h2 {
+  color: rgb(214, 212, 212);
   text-align: center;
+  margin: 10px;
+  background-color: rgba(17, 40, 117, 0.781);
+  font-family: "Ibarra Real Nova", serif;
+}
+h2 {
+  background-color: rgba(146, 166, 231, 0.781);
+  color: rgb(51, 48, 48);
+}
+
+form {
+  margin: 10px;
+  background-color: rgba(151, 149, 149, 0.322);
+  padding: 20px;
+  font-family: "Ibarra Real Nova", serif;
+}
+
+thead a {
+  color: white;
+}
+thead a:hover {
+  color: pink;
 }
