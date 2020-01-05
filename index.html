@@ -35,6 +35,7 @@
               class="form-control"
               id="firstName"
               placeholder="First name"
+              value="test"
             />
           </div>
         </div>
@@ -48,13 +49,14 @@
               class="form-control"
               id="lastName"
               placeholder="Last name"
+              value="test"
             />
           </div>
         </div>
         <div class="form-group row">
           <label for="age" class="col-sm-2 col-form-label">Age</label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="age" placeholder="Age" />
+            <input type="text" class="form-control" id="age" placeholder="Age" value="test" />
           </div>
         </div>
         <fieldset class="form-group">
@@ -67,7 +69,7 @@
                   type="radio"
                   name="gridRadios"
                   id="maleGender"
-                  value="option1"
+                  value="Male"
                   checked
                 />
                 <label class="form-check-label" for="maleGender">
@@ -81,7 +83,7 @@
                   type="radio"
                   name="gridRadios"
                   id="femaleGender"
-                  value="female"
+                  value="Female"
                 />
                 <label class="form-check-label" for="femaleGender">
                   Female
@@ -103,14 +105,14 @@
           <div class="col-sm-2">Addictions</div>
           <div class="col-sm-2">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="smoke" />
+              <input class="form-check-input" type="checkbox" id="smoke" value="Smoke" />
               <label class="form-check-label" for="smoke">
                 Smoke
               </label>
             </div></div>
             <div class="col-sm-2">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="alcohol" />
+              <input class="form-check-input" type="checkbox" id="alcohol" value="Alcohol" />
               <label class="form-check-label" for="alcohol">
                 Alcohol
               </label>
@@ -118,7 +120,7 @@
           </div>
           <div class="col-sm-2">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="drug" />
+              <input class="form-check-input" type="checkbox" id="drug" value="Drug"  />
               <label class="form-check-label" for="drug">
                 Drug
               </label>
@@ -127,7 +129,7 @@
         </div>
         <div class="form-group row">
           <div class="align-self-center col-sm-4">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Submit</button>
+            <button type="button" id='submitBtn'class="btn btn-primary"><i class="fa fa-save"></i> Submit</button>
           </div>
         </div>
       </form>
@@ -146,27 +148,27 @@
               <th scope="col">Delete</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id='patientList'>
             <tr>
-              <th scope="row">1</th>
+              <td>1</td>
               <td>John</td>
               <td>Mark</td>
               <td>23</td>
               <td>male</td>
               <td>London</td>
               <td>Smoke</td>
-              <td><button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+              <td><button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
               </td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <td>2</td>
               <td>Alan</td>
               <td>Poe</td>
               <td>32</td>
               <td>female</td>
               <td>Washington</td>
               <td>Drug</td>
-              <td><button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+              <td><button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
 </td>
             </tr>
           </tbody>
