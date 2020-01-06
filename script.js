@@ -5,6 +5,9 @@ Patient Form Js
 
 let patients = [];
 let id = 1;
+
+//ACTIONS
+//submit button action
 document.getElementById("submitBtn").addEventListener("click", function() {
   if (validateForm(getFormData())) {
     patients.push(getFormData());
@@ -14,6 +17,10 @@ document.getElementById("submitBtn").addEventListener("click", function() {
     alert("Please Control Fields");
   }
 });
+
+//delete button action
+
+//FUNCTIONS
 //get data from form field
 function getFormData() {
   let patient = {};
@@ -52,7 +59,7 @@ function validateForm(patient) {
     return false;
   }
 }
-
+// list all patients
 function renderData() {
   let i = 0;
   let render = "";
@@ -81,9 +88,16 @@ function renderData() {
       patients[i].addictions +
       "</td>" +
       "<td>" +
-      `<button type="button" class="btn btn-danger" id='${patients[i].id}'+><i class="fa fa-trash"></i> Delete</button>` +
+      `<button type="button" class="btn btn-danger" id='${patients[i].id}' onclick='deleteBtnFnc(this)'><i class="fa fa-trash"></i> Delete</button>` +
       "</td>" +
       "</tr>";
   }
   document.getElementById("patientList").innerHTML = render;
+}
+
+function deleteBtnFnc(element) {
+  patients = patients.filter(item => {
+    return item.id != element.id;
+  });
+  renderData();
 }
