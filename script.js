@@ -1,10 +1,6 @@
-/*
-Patient Form Js 
-
-*/
-
 let patients = [];
 let id = 1;
+let sortedBy = [];
 
 //ACTIONS
 //submit button action
@@ -17,8 +13,6 @@ document.getElementById("submitBtn").addEventListener("click", function() {
     alert("Please Control Fields");
   }
 });
-
-//delete button action
 
 //FUNCTIONS
 //get data from form field
@@ -94,10 +88,26 @@ function renderData() {
   }
   document.getElementById("patientList").innerHTML = render;
 }
-
+// delete button onclick functions
 function deleteBtnFnc(element) {
   patients = patients.filter(item => {
     return item.id != element.id;
   });
+  renderData();
+}
+//sort function
+function sortPatients(sortBy) {
+  if (sortedBy.indexOf(sortBy)<0) {
+    patients.sort((a, b) => {
+      return a[sortBy] === b[sortBy] ? 0 : a[sortBy] < b[sortBy] ? -1 : 1;
+    });
+
+    sortedBy.push(sortBy);
+  } else {
+    patients.sort((a, b) => {
+      return a[sortBy] === b[sortBy] ? 0 : a[sortBy] < b[sortBy] ? 1 : -1;
+    });
+    sortedBy.splice(sortedBy.indexOf(sortBy),1);
+  }
   renderData();
 }
